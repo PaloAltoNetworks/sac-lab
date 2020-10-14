@@ -12,9 +12,9 @@ data:
   {{- if .Values.panorama.ip2 }}
   PAN_PANORAMA_IP2: {{ .Values.panorama.ip2 | quote }}
   {{- end }}
-  PAN_DEVICE_GROUP: {{ .Values.panorama.deviceGroup | quote }}
-  PAN_TEMPLATE: {{ .Values.panorama.template | quote }}
-  PAN_PANORAMA_CGNAME: {{ .Values.panorama.cgName | quote }}
+  PAN_DEVICE_GROUP: "dev-dg"
+  PAN_TEMPLATE_STACK: "k8s-stack"
+  PAN_CGNAME: "Panorama"
 
   # Intended License Bundle type - "CN-X-BASIC, CN-X-BND1, CN-X-BND2"
   {{- if eq .Values.firewall.licenseBundle "basic" }}
